@@ -3,6 +3,9 @@ import NavBar from './Components/NavBar/NavBar'
 import Waves from './Components/Waves/Waves';
 import SpotlightCard from './Components/SpotlightCard/SpotlightCard';
 import './App.css';
+import tunegrabImg from './assets/tunegrab-scrn.png';
+import tempmailImg from './assets/tempmail-scrn.png';
+import aboutImg from './assets/about-image.jpg';
 
 function App() {
   return (
@@ -19,7 +22,6 @@ function App() {
         maxCursorMove={120}
         xGap={12}
         yGap={36}
-        opacity={0.2}
       />
       <div>
         <NavBar />
@@ -33,39 +35,38 @@ function App() {
       </section>
 
     <section id="projects" className="projects wrapper">
-      <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255,255,255,0.08)">
-        <div className="project-card">
-          <img src="src/assets/tunegrab-scrn.png" alt="TuneGrab Project Screenshot" className="card-img" />
-          <div className="card-text">
-            <h3>TuneGrab</h3>
-            <a href="https://github.com/mosesfdo/TuneGrab" target="_blank">View Project</a>
-            <p>TuneGrab is a Python application that allows users to download Spotify tracks and playlists as MP3 files using the Spotify API and yt-dlp. With a sleek, dark-themed GUI, it offers an intuitive way to manage your music collection.</p>
-            <h4>Cause:</h4>
-            <p>All I wanted was a simple app to download songs for free. After trying every sketchy tool on the internet, I gave up and built my own. TuneGrab does exactly what I wanted—no ads, no drama, just music.</p>
+      <div className="projects-container">
+        <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255,255,255,0.08)">
+          <div className="project-card">
+            <img src={tunegrabImg} alt="TuneGrab Project Screenshot" className="card-img" />
+            <div className="card-text">
+              <h3>TuneGrab</h3>
+              <a href="https://github.com/mosesfdo/TuneGrab" target="_blank">View Project</a>
+              <p>TuneGrab is a Python application that allows users to download Spotify tracks and playlists as 
+                MP3 files using the Spotify API and yt-dlp. With a sleek, dark-themed GUI, it offers an intuitive 
+                way to manage your music collection.</p>
+              <h4>Cause:</h4>
+              <p>All I wanted was a simple app to download songs for free. After trying every sketchy tool on the internet, 
+                I gave up and built my own. TuneGrab does exactly what I wanted—no ads, no drama, just music.</p>
+            </div>
           </div>
-        </div>
-      </SpotlightCard>
-      <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255,255,255,0.08)">
-        <div className="project-card reverse">
-          <div className="card-text">
-            <h3>TempMail</h3>
-            <a href="https://github.com/mosesfdo/TempMail" target="_blank">View Project</a>
-            <p>This project is a web application designed to simplify task management and collaboration. Built with React and Node.js, it features real-time updates and intuitive drag-and-drop functionality.</p>
-            <h4>Cause:</h4>
-            <p>Inspired by the need for better team collaboration tools, this project aims to streamline workflows and enhance productivity. It's a solution born out of necessity and refined through user feedback.</p>
+        </SpotlightCard>
+        <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255,255,255,0.08)">
+          <div className="project-card reverse">
+            <div className="card-text">
+              <h3>TempMail</h3>
+              <a href="https://github.com/mosesfdo/TempMail" target="_blank">View Project</a>
+              <p>This project is a web application designed to simplify task management and collaboration. Built with React and Node.js, it features real-time updates and intuitive drag-and-drop functionality.</p>
+              <h4>Cause:</h4>
+              <p>Inspired by the need for better team collaboration tools, this project aims to streamline workflows and enhance productivity. It's a solution born out of necessity and refined through user feedback.</p>
+            </div>
+            <img src={tempmailImg} alt="TempMail Project Screenshot" className="card-img" />
           </div>
-          <img src="src/assets/tempmail-scrn.png" alt="TempMail Project Screenshot" className="card-img" />
-        </div>
-      </SpotlightCard>
+        </SpotlightCard>
+      </div>
     </section>
-
-
-
-
-
-
       <section id="about" className="about wrapper">
-            <img src="src\assets\about-image.jpg" alt="about-image" className="about-img" />
+            <img src={aboutImg} alt="about-image" className="about-img" />
             <h2>"And he has filled him with the Spirit of God, with wisdom, with understanding,
                  with knowledge and with all kinds of skills—to make artistic 
                  designs for work in gold, silver and bronze..."</h2>
@@ -84,6 +85,10 @@ function App() {
 
                     </p>
                     <p>—I create them.</p>
+      </section>
+      <section id="contact" className="contact wrapper">
+        <h2>Contact</h2>
+        <p>Feel free to reach out via <a href="mailto:your.email@example.com">email</a> or connect on <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.</p>
       </section>
     </div>
   )

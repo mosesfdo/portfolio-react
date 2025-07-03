@@ -56,19 +56,13 @@ section{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 32px;
 }
 
 .projects {
   position: relative;
   z-index: auto;
   min-height: 350px; /* Ensures enough space for the TiltedCard */
-}
-
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  width: 100%;
 }
 
 .project-card {
@@ -175,8 +169,8 @@ section{
     display: block !important;
     height: auto !important;
     min-height: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding: 24px 0 24px 0 !important;
+    margin-bottom: 32px !important;
     align-items: unset !important;
     justify-content: unset !important;
     width: 100vw !important;
@@ -193,14 +187,21 @@ section{
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    padding: 0 0.5rem !important;
-    margin: 0 !important;
+    padding: 0 0.5rem 0.5rem 0.5rem !important;
+    margin: 0 0 32px 0 !important;
     width: 100vw !important;
     box-sizing: border-box !important;
     overflow-x: hidden !important;
   }
-  .projects .custom-spotlight-card,
-  .card-spotlight {
+  .about-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 32px auto 24px auto;
+  }
+  .card-spotlight,
+  .projects .custom-spotlight-card {
     padding: 0.5rem 0.5rem 1rem 0.5rem !important;
     margin: 0 0 18px 0 !important;
     border-radius: 1rem !important;
@@ -271,11 +272,17 @@ section{
   }
   .about-img {
     width: 100%;
-    max-width: 320px;
+    max-width: 220px;
     height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 32px auto 24px auto;
+  }
+  .app-root {
+    margin-top: 70px !important;
+  }
+  .main-hero-text {
+    margin-top: 48px !important;
+    margin-bottom: 32px !important;
   }
 }
 
