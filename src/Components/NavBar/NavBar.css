@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Media Sans";
+    src: url("/src/assets/Fonts/mediasans-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "SF Compact Display";
+    src: url("src/assets/Fonts/SF-Compact-Display-Thin.otf");
+}
+
+
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+
+}
+
+.TopLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.TopLogo a{
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Media Sans", sans-serif;
+    letter-spacing: 1.5px;
+}
+
+
+.TopLogo p{
+    font-size: 15px;
+    color: #686868;
+    font-family: "SF Compact Display", sans-serif;
+    margin-top: 2px;
+}
+
+.Navlinks{
+    display: flex;
+}
+
+.Navlinks ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    gap: 2px;
+}
+
+.Navlinks li{
+    margin: 0 10px;
+}
+
+.Navlinks a{
+    text-decoration: none;
+    color: #585858;
+    text-align: right;
+    transition: color 0.2s;
+}
+
+.Navlinks a:hover {
+    color: #cccccc;
+}
