@@ -1,7 +1,27 @@
-import React from 'react'   
+import React, { useEffect } from 'react'   
 import './NavBar.css'
 
 function NavBar() {
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-anchor');
+    const observer = new window.IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.6 });
+    sections.forEach(section => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="Navbar">
         <div className="TopLogo">
@@ -11,21 +31,14 @@ function NavBar() {
 
         <div className="Navlinks">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" className="nav-anchor">Home</a></li>
+                <li><a href="#projects" className="nav-anchor">Projects</a></li>
+                <li><a href="#about" className="nav-anchor">About</a></li>
+                <li><a href="#contact" className="nav-anchor">Contact</a></li>
             </ul>
         </div>
 
     </div>
-
-
-
-
-
-
   )
 }
 

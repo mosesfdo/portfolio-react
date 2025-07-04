@@ -8,6 +8,10 @@
     src: url("src/assets/Fonts/SF-Compact-Display-Thin.otf");
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 
 .Navbar{
     display: flex;
@@ -28,11 +32,11 @@
 
 .TopLogo a{
     text-decoration: none;
-    color: #cccccc;
+    color: #e7e7e7;
     font-size: 30px;
     font-weight: bold;
     font-family: "Media Sans", sans-serif;
-    letter-spacing: 1.5px;
+    letter-spacing: 3px;
 }
 
 
@@ -65,10 +69,36 @@
     color: #585858;
     text-align: right;
     transition: color 0.2s;
+    font-family: "SF Compact Display", sans-serif;
 }
 
 .Navlinks a:hover {
     color: #cccccc;
+}
+
+.Navlinks a.active {
+    color: #f0f0f0;
+    transition: background 0.3s, color 0.2s;
+}
+
+.email-button {
+    text-decoration: none;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    color: #121212;
+    cursor: pointer;
+    font-family: "SF-Compact-Display", sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.email-button:hover {
+    background-color: #222;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 @media (max-width: 700px) {
