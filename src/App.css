@@ -266,3 +266,53 @@ body {
   color: #fff;
   font-style: italic;
 }
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: "Astralaga", sans-serif;
+    font-weight: 200;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #9b9b9b;
+    font-family: "SF-Compact-Display", sans-serif;
+    font-weight: 100;
+    width: 400px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.email-button {
+    text-decoration: none;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    color: #121212;
+    cursor: pointer;
+    font-family: "SF-Compact-Display", sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.email-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
