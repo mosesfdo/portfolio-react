@@ -90,7 +90,7 @@ function App() {
         <h2>Contact</h2>
         <p>Got a project, an idea, or just want to connect? I'm always open to new opportunities and collaborations. Reach out, and let's make something awesome.
           </p>
-        <a href="mailto:your.email@example.com" className='email-button'>Email</a>
+        <a href="mailto:dmosesfdernando@gmail.com" className='email-button'>Email</a>
 
       </section>
     </div>
