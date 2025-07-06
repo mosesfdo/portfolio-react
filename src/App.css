@@ -29,10 +29,6 @@ section{
     padding: 0 20px;
 }
 
-.main-hero-text{
-    animation:blurAppear 2s ease-in-out;
-}
-
 .main-hero-text h2{
     font-size: 2.5rem;
     line-height: 1.2;
@@ -61,147 +57,39 @@ section{
     margin-top: 32px;
 }
 
-.cause{
-  
-}
-
-
-
 .projects {
   position: relative;
   z-index: auto;
   min-height: 350px; /* Ensures enough space for the TiltedCard */
 }
 
-.project-card {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.card-spotlight {
+.project-card-1,
+.project-card-2 {
   position: relative;
-  z-index: auto;
-  border-radius: 1.5rem;
-  border: 1px solid #222;
-  background-color: #111;
-  padding: 2rem;
-  overflow: hidden;
-  --mouse-x: 50%;
-  --mouse-y: 50%;
-  --spotlight-color: rgba(255, 255, 255, 0);
-  animation: appearfromleft 0.8s cubic-bezier(0.4, 0.2, 0.2, 1) both;
-  transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform: scale(0.9);
+  
 }
 
-.card-spotlight:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
 
-.project-card .card-img {
-  width: 55%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
 
-.project-card .card-text {
-  width: 45%;
-  text-align: left;
-}
-
-.card-text h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  font-family: "Astralaga", serif;
-}
-
-.card-text h4 {
-  font-family: 'Astralaga', sans-serif;
-  font-weight: 400;
-  letter-spacing: normal;
-  color: #888;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-.card-text a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: normal;
-  display: inline-block;
-  margin-bottom: 15px;
-  position: relative;
-  font-family: "SF Compact", sans-serif;
-}
-
-.card-text a::after {
-  content: '→';
-  margin-left: 8px;
-  transition: margin-left 0.3s ease;
-}
-
-.card-text a:hover::after {
-  margin-left: 15px;
-}
-
-.card-text p {
-  text-align: left;
-  color: #cccccc;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  font-weight: 300;
-  font-family: "SF Compact", sans-serif;
-}
-
-@keyframes appearfromleft {
-  0% {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.projects .custom-spotlight-card {
-  margin-bottom: 48px;
-}
-
-.projects .custom-spotlight-card:last-child {
-  margin-bottom: 0;
-}
 
 @media (max-width: 700px) {
-
-
-  .main-hero-text{
-    transform: scale(0.8);
-  }
-
-  .card-text p{
-    font-size: 0.9rem;
-  }
-
-  .project-card .card-img{
-    height: 300px;
-  }
-  .cause{
-    display: none;
-  }
-
   .about-img {
     height: 300px;
     width: 300px;
     margin-top: 80px;
   }
-   section {
+  section {
     height: auto; /* Let section grow with content on mobile */
     min-height: 100vh; /* Optional: still fill screen if content is short */
   }
+  .project-card-1,
+.project-card-2 {
+  position: relative;
+  transform: scale(0.65);
+  
+}
+
 }
 
 html, body {
@@ -305,7 +193,7 @@ body {
     padding: 10px 30px;
     border: none;
     border-radius: 5px;
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     color: #121212;
     cursor: pointer;
     font-family: "SF-Compact-Display", sans-serif;
@@ -315,6 +203,7 @@ body {
 }
 
 .email-button:hover {
-    background-color: #131313;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
     transform: scale(1.05);
 }
