@@ -4,6 +4,7 @@ import Waves from './Components/Waves/Waves';
 import './App.css';
 import aboutImg from './assets/about-image.jpg';
 import TiltedCard from './Components/TiltedCard/TiltedCard';
+import SocialIcons from './Components/SocialIcons/SocialIcons';
 
 
   
@@ -27,6 +28,9 @@ function App() {
       <div>
         <NavBar />
       </div>
+      <div>
+        <SocialIcons />
+      </div>
       <section id="home" className="hero wrapper">
         <div className="main-hero-text">
           <h2>"I build apps that do the boring stuff
@@ -40,7 +44,7 @@ function App() {
         <div className="project-card-1">
           <a href="https://github.com/mosesfdo/tunegrab" target="_blank" rel="noopener noreferrer">
           <TiltedCard
-            imageSrc="/src/assets/tunegrab-scrn.png"
+            imageSrc="./src/assets/tunegrab-scrn.png"
             altText="TuneGrab - Music Downloader"
             captionText="🚀Open Project"
             containerHeight="400px"

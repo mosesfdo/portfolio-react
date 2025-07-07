@@ -12,6 +12,16 @@ html{
     scroll-behavior: smooth;
 }
 
+@keyframes appearfromabove {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 .Navbar{
     display: flex;
@@ -21,6 +31,7 @@ html{
     position: fixed;
     width: 100%;
     z-index: 1000;
+    animation: appearfromabove 1.5s ease-in-out;
 }
 
 .TopLogo{

@@ -1,0 +1,30 @@
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    bottom: 20px; /* Positioned at the bottom */
+    left: 20px; /* Positioned at the left */
+    animation: appearfrombelow 1.5s ease-in-out;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+@keyframes appearfrombelow {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
