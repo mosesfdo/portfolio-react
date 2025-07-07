@@ -69,25 +69,25 @@ function App() {
 
         <div className="project-card-2">
           <a href="https://github.com/mosesfdo/tempmail" target="_blank" rel="noopener noreferrer">
-          <TiltedCard
-            imageSrc={projectimg2}
-            altText="TempMail - Disposable Email App"
-            captionText="🚀Open Project"
-            containerHeight="400px"
-            containerWidth="600px"
-            imageHeight="400px"
-            imageWidth="600px"
-            rotateAmplitude={10}
-            scaleOnHover={1.15}
-            showMobileWarning={false}
-            showTooltip={true}
-            displayOverlayContent={true}
-            overlayContent={
-              <p className="tilted-card-demo-text">
-                TempMail - Disposable Email App
-              </p>
-            }
-          />
+            <TiltedCard
+              imageSrc={projectimg2}
+              altText="TempMail - Disposable Email App"
+              captionText="🚀Open Project"
+              containerHeight="400px"
+              containerWidth="600px"
+              imageHeight="400px"
+              imageWidth="600px"
+              rotateAmplitude={10}
+              scaleOnHover={1.15}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              overlayContent={
+                <p className="tilted-card-demo-text">
+                  TempMail - Disposable Email App
+                </p>
+              }
+            />
           </a>
         </div>
       </div>
