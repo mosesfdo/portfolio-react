@@ -31,7 +31,7 @@ html{
     position: fixed;
     width: 100%;
     z-index: 1000;
-    animation: appearfromabove 1.5s ease-in-out;
+    animation: appearfromabove 1.5s cubic-bezier(.5,.58,.5,1.34);
 }
 
 .TopLogo{

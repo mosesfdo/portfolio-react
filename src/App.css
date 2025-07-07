@@ -36,7 +36,7 @@ section{
     color: #ffffff;
     font-weight: 200;
     font-family: "Astralaga";
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1s cubic-bezier(.5,.58,.5,1.34);
 }
 
 @keyframes fadeIn {
@@ -50,12 +50,23 @@ section{
     }
 }
 
+@keyframes fadeinp{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 0.5;
+        transform: translateY(0);
+    }
+}
+
 .main-hero-text p{
     font-size: 1rem;
     color: #cccccc;
     margin-top: 10px;
     opacity: 0.5;
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeinp 1s cubic-bezier(.5,.58,.5,1.34);
     
 }
 

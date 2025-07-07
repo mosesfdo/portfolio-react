@@ -120,6 +120,7 @@ function App() {
         </p>
         <a href="mailto:dmosesfdernando@gmail.com" className='email-button'>Email</a>
       </section>
+      
     </div>
   )
 }
