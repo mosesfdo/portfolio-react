@@ -81,21 +81,91 @@ section{
     margin-top: 32px;
 }
 
+
+
+
 .projects {
   position: relative;
   z-index: auto;
   min-height: 350px; /* Ensures enough space for the TiltedCard */
 }
 
+
+
+
+
 .project-card-1,
 .project-card-2 {
   position: relative;
-  transform: scale(0.9);
+  transform: scale(0.85);
   
+}
+
+.project1{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.project2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
+.card-text {
+  text-align: left;
+}
+
+.card-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-family: 'Astralaga', sans-serif;
+  text-align: left;
+}
+
+.card-text h4 {
+  font-family: 'SF Compact', sans-serif;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: #888;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.card-text a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: normal;
+  display: inline-block;
+  margin-bottom: 15px;
+  position: relative;
+  text-align: left;
+  font-family: 'SF Compact', sans-serif;
+}
+
+.card-text a::after {
+  content: '→';
+  margin-left: 8px;
+  transition: margin-left 0.3s ease;
+}
+
+.card-text a:hover::after {
+  margin-left: 15px;
+}
+
+.card-text p {
+  text-align: left;
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
 
 @media (max-width: 700px) {
   .about-img {
@@ -112,6 +182,10 @@ section{
   position: relative;
   transform: scale(0.65);
   
+}
+
+.card-text{
+  display: none;
 }
 
 }

@@ -24,6 +24,17 @@
   .tilted-card-caption {
     display: none;
   }
+  .tilted-card-demo-text {
+  /* Glassmorphism effect with higher contrast and smoother look */
+  color: #161616;
+  background-color: rgba(240, 240, 240, 0.5);
+  backdrop-filter: blur(100px);
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  transform: translate(8%, 50%);
+  display: block !important;
+}
 }
 
 .tilted-card-inner {
@@ -66,11 +77,5 @@
 
 
 .tilted-card-demo-text {
-  /* Glassmorphism effect with higher contrast and smoother look */
-  color: #292929;
-  background-color: rgba(240, 240, 240, 0.5);
-  backdrop-filter: blur(100px);
-  border-radius: 10px;
-  padding: 10px 15px;
-  transform: translate(8%, 50%);
+  display: none;
 }
