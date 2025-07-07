@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavBar from './Components/NavBar/NavBar'
 import Waves from './Components/Waves/Waves';
 import './App.css';
@@ -7,11 +7,41 @@ import TiltedCard from './Components/TiltedCard/TiltedCard';
 import SocialIcons from './Components/SocialIcons/SocialIcons';
 import projectimg1 from './assets/tunegrab-scrn.png';
 import projectimg2 from './assets/tempmail-scrn.png';
+import Lenis from 'lenis'
 
 
   
 
 function App() {
+  const lenisRef = React.useRef(null);
+
+  useEffect(() => {
+    lenisRef.current = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true,
+      smoothTouch: true,
+    });
+    function raf(time) {
+      lenisRef.current.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+    return () => {
+      lenisRef.current && lenisRef.current.destroy();
+    };
+  }, []);
+
+  const handleNavScroll = React.useCallback((e) => {
+    const href = e.currentTarget.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target && lenisRef.current) {
+        lenisRef.current.scrollTo(target, { offset: 0 });
+      }
+    }
+  }, []);
   return (
     <div className="app-root">
       <Waves
@@ -28,7 +58,7 @@ function App() {
         yGap={36}
       />
       <div>
-        <NavBar />
+        <NavBar scrollToSection={handleNavScroll} />
       </div>
       <div>
         <SocialIcons />
