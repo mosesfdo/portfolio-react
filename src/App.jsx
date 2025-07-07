@@ -5,6 +5,8 @@ import './App.css';
 import aboutImg from './assets/about-image.jpg';
 import TiltedCard from './Components/TiltedCard/TiltedCard';
 import SocialIcons from './Components/SocialIcons/SocialIcons';
+import projectimg1 from './assets/tunegrab-scrn.png';
+import projectimg2 from './assets/tempmail-scrn.png';
 
 
   
@@ -44,7 +46,7 @@ function App() {
         <div className="project-card-1">
           <a href="https://github.com/mosesfdo/tunegrab" target="_blank" rel="noopener noreferrer">
           <TiltedCard
-            imageSrc="./src/assets/tunegrab-scrn.png"
+            imageSrc={projectimg1}
             altText="TuneGrab - Music Downloader"
             captionText="🚀Open Project"
             containerHeight="400px"
@@ -68,7 +70,7 @@ function App() {
         <div className="project-card-2">
           <a href="https://github.com/mosesfdo/tempmail" target="_blank" rel="noopener noreferrer">
           <TiltedCard
-            imageSrc="/src/assets/tempmail-scrn.png"
+            imageSrc={projectimg2}
             altText="TempMail - Disposable Email App"
             captionText="🚀Open Project"
             containerHeight="400px"
