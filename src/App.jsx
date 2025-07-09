@@ -8,6 +8,8 @@ import SocialIcons from './Components/SocialIcons/SocialIcons';
 import projectimg1 from './assets/tunegrab-scrn.png';
 import projectimg2 from './assets/tempmail-scrn.png';
 import Lenis from 'lenis'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
   
@@ -21,6 +23,10 @@ function App() {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smooth: true,
       smoothTouch: true,
+    });
+    AOS.init({
+      duration: 1000,
+      once: false, // Animation will trigger every time the element enters the viewport
     });
     function raf(time) {
       lenisRef.current.raf(time);
@@ -63,7 +69,7 @@ function App() {
       <div>
         <SocialIcons />
       </div>
-      <section id="home" className="hero wrapper">
+      <section id="home" className="hero wrapper" data-aos="fade-up">
         <div className="main-hero-text">
           <h2>"I build apps that do the boring stuff
             —so I can pretend I'm being productive."</h2>
@@ -71,7 +77,7 @@ function App() {
         </div>
       </section>
 
-    <section id="projects" className="projects wrapper">
+    <section id="projects" className="projects wrapper" data-aos="fade-up" data-aos-delay="200">
       <div className="projects-container">
         <div className='project1'>
           <div class="card-text">
@@ -141,7 +147,7 @@ function App() {
         </div>
       </div>
     </section>
-      <section id="about" className="about wrapper">
+      <section id="about" className="about wrapper" data-aos="fade-up" data-aos-delay="400">
         <img src={aboutImg} alt="about-image" className="about-img" />
         <h2>
           "And he has filled him with the Spirit of God, with wisdom, with understanding,
@@ -161,7 +167,7 @@ function App() {
         </p>
         <p>—I create them.</p>
       </section>
-      <section id="contact" className="contact wrapper">
+      <section id="contact" className="contact wrapper" data-aos="fade-up" data-aos-delay="600">
         <h2>Contact</h2>
         <p>
           Got a project, an idea, or just want to connect? I'm always open to new opportunities and collaborations. 
