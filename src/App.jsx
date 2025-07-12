@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import NavBar from './Components/NavBar/NavBar'
 import Waves from './Components/Waves/Waves';
 import './App.css';
 import aboutImg from './assets/about-image.jpg';
@@ -8,7 +7,7 @@ import SocialIcons from './Components/SocialIcons/SocialIcons';
 import projectimg1 from './assets/tunegrab-scrn.png';
 import projectimg2 from './assets/tempmail-scrn.png';
 import Lenis from 'lenis'
-
+import NavBar from "./Components/NavBar/NavBar"
 
   
 
