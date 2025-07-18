@@ -88,7 +88,8 @@ section{
 .projects {
   position: relative;
   z-index: auto;
-  min-height: 350px; /* Ensures enough space for the TiltedCard */
+  padding-bottom: 10%;
+
 }
 
 
