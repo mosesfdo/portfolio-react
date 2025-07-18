@@ -86,10 +86,6 @@ function App() {
             imageSrc={projectimg1}
             altText="TuneGrab - Music Downloader"
             captionText="🚀Open Project"
-            containerHeight="400px"
-            containerWidth="600px"
-            imageHeight="400px"
-            imageWidth="600px"
             rotateAmplitude={10}
             scaleOnHover={1.15}
             showMobileWarning={false}
@@ -120,10 +116,6 @@ function App() {
               imageSrc={projectimg2}
               altText="TempMail - Disposable Email App"
               captionText="🚀Open Project"
-              containerHeight="400px"
-              containerWidth="600px"
-              imageHeight="400px"
-              imageWidth="600px"
               rotateAmplitude={10}
               scaleOnHover={1.15}
               showMobileWarning={false}

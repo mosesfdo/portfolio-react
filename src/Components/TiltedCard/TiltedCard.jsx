@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./TiltedCard.css";
 
@@ -12,10 +12,10 @@ export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
   captionText = "",
-  containerHeight = "300px",
+  containerHeight = "clamp(250px, 30vw, 400px)",
   containerWidth = "100%",
-  imageHeight = "300px",
-  imageWidth = "300px",
+  imageHeight = "clamp(250px, 30vw, 400px)",
+  imageWidth = "clamp(300px, 40vw, 600px)",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
@@ -38,6 +38,18 @@ export default function TiltedCard({
   });
 
   const [lastY, setLastY] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile/tablet
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   function handleMouse(e) {
     if (!ref.current) return;
@@ -46,8 +58,11 @@ export default function TiltedCard({
     const offsetX = e.clientX - rect.left - rect.width / 2;
     const offsetY = e.clientY - rect.top - rect.height / 2;
 
-    const rotationX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
-    const rotationY = (offsetX / (rect.width / 2)) * rotateAmplitude;
+    // Reduce rotation amplitude on mobile devices
+    const effectiveRotateAmplitude = isMobile ? rotateAmplitude * 0.5 : rotateAmplitude;
+
+    const rotationX = (offsetY / (rect.height / 2)) * -effectiveRotateAmplitude;
+    const rotationY = (offsetX / (rect.width / 2)) * effectiveRotateAmplitude;
 
     rotateX.set(rotationX);
     rotateY.set(rotationY);
@@ -112,11 +127,7 @@ export default function TiltedCard({
         />
 
         {displayOverlayContent && overlayContent && (
-          <motion.div
-            className="tilted-card-overlay"
-          >
-            {overlayContent}
-          </motion.div>
+          <motion.div className="tilted-card-overlay">{overlayContent}</motion.div>
         )}
       </motion.div>
 

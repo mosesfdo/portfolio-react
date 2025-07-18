@@ -79,3 +79,46 @@
 .tilted-card-demo-text {
   display: none;
 }
+
+/* Responsive styles for different screen sizes */
+@media (max-width: 768px) {
+  .tilted-card-figure {
+    perspective: 600px;
+  }
+  
+  .tilted-card-inner {
+    max-width: 90vw;
+  }
+  
+  .tilted-card-img {
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .tilted-card-figure {
+    perspective: 400px;
+  }
+  
+  .tilted-card-inner {
+    max-width: 95vw;
+  }
+  
+  .tilted-card-img {
+    max-width: 95vw;
+    height: auto;
+  }
+  
+  .tilted-card-demo-text {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Ensure images maintain aspect ratio */
+.tilted-card-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
