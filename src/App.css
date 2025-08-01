@@ -16,10 +16,9 @@ section{
     align-items: center;
     justify-content: center;
     width: 100%;       /* or any unit like px, em, rem, %, vw */
-    height: 100vh;      /* 100% of the viewport height */
     text-align: center;
     overflow: hidden;
-    min-height: 100vh; /* Ensures section fills the screen */
+    min-height: 100vh;
 }
 
 
