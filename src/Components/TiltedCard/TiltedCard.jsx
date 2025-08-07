@@ -40,7 +40,6 @@ export default function TiltedCard({
   const [lastY, setLastY] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Check if device is mobile/tablet
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
