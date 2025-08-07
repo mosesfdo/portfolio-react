@@ -77,8 +77,6 @@ function App() {
                     <h3>TuneGrab</h3>
                     <a href="https://github.com/mosesfdo/TuneGrab" target="_blank">View Project</a>
                     <p>TuneGrab is a Python application that allows users to download Spotify tracks and playlists as MP3 files using the Spotify API and yt-dlp. With a sleek, dark-themed GUI, it offers an intuitive way to manage your music collection.</p>
-                    <h4>Cause:</h4>
-                    <p>All I wanted was a simple app to download songs for free. After trying every sketchy tool on the internet, I gave up and built my own. TuneGrab does exactly what I wanted—no ads, no drama, just music.</p>
                 </div>
         <div className="project-card-1">
           <a href="https://github.com/mosesfdo/tunegrab" target="_blank" rel="noopener noreferrer">
@@ -106,8 +104,6 @@ function App() {
                     <h3>TempMail</h3>
                     <a href="https://github.com/mosesfdo/TempMail" target="_blank">View Project</a>
                     <p>This project is a web application designed to simplify task management and collaboration. Built with React and Node.js, it features real-time updates and intuitive drag-and-drop functionality.</p>
-                    <h4>Cause:</h4>
-                    <p>Inspired by the need for better team collaboration tools, this project aims to streamline workflows and enhance productivity. It’s a solution born out of necessity and refined through user feedback.</p>
                 </div>
           
         <div className="project-card-2">
@@ -117,7 +113,7 @@ function App() {
               altText="TempMail - Disposable Email App"
               captionText="🚀Open Project"
               rotateAmplitude={10}
-              scaleOnHover={1.15}
+              scaleOnHover={1.10}
               showMobileWarning={false}
               showTooltip={true}
               displayOverlayContent={true}
