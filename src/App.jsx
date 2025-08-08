@@ -105,7 +105,6 @@ function App() {
                     <a href="https://github.com/mosesfdo/TempMail" target="_blank">View Project</a>
                     <p>This project is a web application designed to simplify task management and collaboration. Built with React and Node.js, it features real-time updates and intuitive drag-and-drop functionality.</p>
                 </div>
-          
         <div className="project-card-2">
           <a href="https://github.com/mosesfdo/tempmail" target="_blank" rel="noopener noreferrer">
             <TiltedCard
@@ -148,14 +147,7 @@ function App() {
         </p>
         <p>—I create them.</p>
       </section>
-      <section id="contact" className="contact wrapper">
-        <h2>Contact</h2>
-        <p>
-          Got a project, an idea, or just want to connect? I'm always open to new opportunities and collaborations. 
-          Reach out, and let's make something awesome.
-        </p>
-        <a href="mailto:dmosesfdernando@gmail.com" className='email-button'>Email</a>
-      </section>
+      
       
     </div>
   )
