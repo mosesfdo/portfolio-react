@@ -10,7 +10,6 @@ import Lenis from 'lenis'
 import NavBar from "./Components/NavBar/NavBar"
 
   
-
 function App() {
   const lenisRef = React.useRef(null);
 
@@ -136,19 +135,19 @@ function App() {
         </h2>
         <p className="verse-mark">— Exodus 35:31-32</p>
         <p>
-          I've always been curious by nature. While most people around me just used computers, 
-          I found myself digging deeper—trying to understand how things worked under the hood. 
-          I was constantly exploring, experimenting, and learning more than my peers. One thing 
-          that always frustrated me? Finding the right software, app, or tool for what I needed. 
+          I've always been curious by nature. While most people around me just used computers,
+          I found myself digging deeper—trying to understand how things worked under the hood.
+          I was constantly exploring, experimenting, and learning more than my peers. One thing
+          that always frustrated me? Finding the right software, app, or tool for what I needed.
           Nothing ever seemed to do exactly what I wanted. That's when it hit me—'Why not build my own?'
-           A simple idea, maybe even a little wild at the time—but it changed everything. 
-           It pushed me to learn how to design and develop products myself. 
+           A simple idea, maybe even a little wild at the time—but it changed everything.
+           It pushed me to learn how to design and develop products myself.
            That spark turned into a passion. Now, I don't just look for solutions
         </p>
         <p>—I create them.</p>
       </section>
-      
-      
+
+
     </div>
   )
 }
