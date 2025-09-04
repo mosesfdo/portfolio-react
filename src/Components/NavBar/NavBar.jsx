@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'   
+import React, { useEffect } from 'react'
 import './NavBar.css'
 
 function NavBar({ scrollToSection }) {
@@ -34,6 +34,7 @@ function NavBar({ scrollToSection }) {
                 <li><a href="#home" className="nav-anchor" onClick={scrollToSection}>Home</a></li>
                 <li><a href="#projects" className="nav-anchor" onClick={scrollToSection}>Projects</a></li>
                 <li><a href="#about" className="nav-anchor" onClick={scrollToSection}>About</a></li>
+                <li><a href="#contact" className="nav-anchor" onClick={scrollToSection}>Contact</a></li>
             </ul>
         </div>
 
