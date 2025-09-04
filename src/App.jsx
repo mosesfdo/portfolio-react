@@ -147,8 +147,11 @@ function App() {
         </p>
         <p>—I create them.</p>
       </section>
-
-
+      <section id="contact" className="contact wrapper">
+        <h2>Let's Connect!</h2>
+        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!</p>
+        <a href="mailto:dmosesfernando@gmail.com" className='email-button'>Reach me</a>
+      </section>
     </div>
   )
 }
